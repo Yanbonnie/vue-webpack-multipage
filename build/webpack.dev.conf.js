@@ -27,16 +27,20 @@ module.exports = merge(baseWebpackConfig, {
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/view/index/index.html',
+      //template: './src/view/index/index.html',
+      template: 'index.html',
       inject: true,
-      chunks:'app'
+      //excludeChunks:'login',
+      //chunks:'app'
     }),
     new HtmlWebpackPlugin({
-      filename: 'login/login.html',
-      template: './src/view/login/login.html',
+      filename: 'login.html',
+      //template: './src/view/login/login.html',
+      template: 'login.html',
       title:"登录页面",
       inject: true,
-      chunks:'login'
+      //excludeChunks:'app',
+      //chunks:'login'
     }),
     new FriendlyErrorsPlugin()
   ]
